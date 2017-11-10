@@ -1,5 +1,5 @@
 /*!
- * vue-laroute v0.1.0 
+ * vue-laroute v0.1.1 
  * (c) 2017 Sam Turrell
  * Released under the MIT License.
  */
@@ -20,7 +20,7 @@ function plugin (Vue, options) {
   Vue.prototype[options.accessor] = options.routes;
 }
 
-plugin.version = '0.1.0';
+plugin.version = '0.1.1';
 
 if (typeof window !== 'undefined' && window.Vue) {
   window.Vue.use(plugin);
