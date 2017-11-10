@@ -5,17 +5,25 @@
 
 Inject Laravel routes into your Vue application via [aaronlord/laroute](https://github.com/aaronlord/laroute). I actually recommend the alternative and more slim-lined version of this package from [AXN-Informatique/laravel-laroute](https://github.com/AXN-Informatique/laravel-laroute).
 
+[DEMO](https://samturrell.github.io/vue-laroute/example)
+
 ## Using this plugin
 
 Adding vue-laroute to your application is as simple as any other plugin:
 
 ```js
+import Vue from 'vue';
+
 import VueLaroute from 'vue-laroute';
 import routes from '../path/to/laroute.js';
 
 Vue.use(VueLaroute, {
   routes,
   accessor: '$routes', // Optional: the global variable for accessing the router
+});
+
+new Vue({
+  el: '#app',
 });
 ```
 
