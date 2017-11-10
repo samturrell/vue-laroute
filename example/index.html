@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vue Laroute example</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+      [v-cloak] {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+  <div id="app" v-cloak>
+    <h1>vue-laroute example</h1>
+    <pre><code>this.$routes.route('home')</code></pre>
+    <p>{{ $routes.route('home') }}</p>
+    <hr>
+    <pre><code>this.$routes.route('products.index')</code></pre>
+    <p>{{ $routes.route('products.index') }}</p>
+    <hr>
+    <pre><code>this.$routes.route('products.show', { id: 123 })</code></pre>
+    <p>{{ $routes.route('products.show', { id: 123 }) }}</p>
+    <hr>
+    <pre><code>this.$routes.route('contact')</code></pre>
+    <p>{{ $routes.route('contact') }}</p>
+    <hr>
+  </div>
+  <script src="./dist/vue-laroute.min.js"></script>
+  <script src="./example/example.js"></script>
+</body>
+</html>
