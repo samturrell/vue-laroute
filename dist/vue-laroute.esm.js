@@ -1,6 +1,6 @@
 /*!
  * vue-laroute v0.1.1 
- * (c) 2017 Sam Turrell
+ * (c) 2018 Sam Turrell
  * Released under the MIT License.
  */
 function plugin (Vue, options) {
@@ -8,7 +8,9 @@ function plugin (Vue, options) {
 
   options = Object.assign({
     accessor: '$routes',
-    routes: {}
+    routes: (typeof window !== 'undefined' && window.laroute)
+      ? window.laroute
+      : {}
   }, options);
 
   Vue.prototype[options.accessor] = options.routes;
@@ -16,7 +18,7 @@ function plugin (Vue, options) {
 
 plugin.version = '0.1.1';
 
-if (typeof window !== 'undefined' && window.Vue) {
+if (typeof window !== 'undefined' && window.Vue && window.laroute) {
   window.Vue.use(plugin);
 }
 
